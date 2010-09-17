@@ -26,7 +26,7 @@ template <class T> int toInt(const T &x){ stringstream s; s << x; int r; s >> r;
 #define foreach(x, v) for (typeof (v).begin() x = (v).begin(); x != (v).end(); ++x)
 #define D(x) cout << #x " = " << (x) << endl
 
-const int N = 100005;
+const int N = 50005;
 // Begins Suffix Arrays implementation
 // O(n log n) - Manber and Myers algorithm
 
@@ -150,16 +150,27 @@ void getHeight(int n){
 // Runs in O(|x-y|)
 int lcp(int x, int y, int n){
     if(x > y) return lcp(y,x,n);
-    if(x == y) return n-x;
+    if(x == y) return n-pos[x];
     int lc = n+1;
-    for(int i = x+1; i<=y; ++i) lc = min(lc, height[i]);
+    for(int i = x+1; i<=y; ++i) if (height[i] != 0) lc = min(lc, height[i]); else return 0;
     return lc;
 }
 
 
 string s;
 
+void print_suffix_array(){
+    puts("Suffix Array");
+    int n = s.size();
+    string tmp;
+    for(int i=0;i<n;++i){
+        tmp = s.substr(pos[i]);
+        printf("pos[%d] = %2d \t suffix = %s \t height[%d] = %d\n",i,pos[i],tmp.c_str(), i, height[i]);
+    }
+}
+
 // You need a string W that represents the pattern
+// Not really tested. Pseudo-tested
 int match_prefix(int n){
     string W; // Fill this outside
     if(W[0] < s[pos[0]]) return -1; // Is not here!
@@ -181,48 +192,70 @@ int match_prefix(int n){
     return pos[r];
 }
 
+// If you have the i-th smaller suffix, Si, it's length will be |Si| = n - pos[i]
+// Now, height[i] stores the number of common letters between Si and Si (s.substr(pos[i]) and s.substr(pos[i-1]))
+// so, you have |Si| - height[i] different strings from these two suffixes => n - pos[i] - height[i]
+void number_of_different_substrings(){
+    int n = s.size();
+    for (int i=0; i<n; ++i) str[i] = s[i];
+    SuffixSort(n);
+    getHeight(n);
+    int ans = 0;
+    for(int i=0;i<n;++i) ans += n-pos[i]-height[i];
+    cout << ans << endl;
+}
 
-void solve(){
+// Number of substrings that appear at least twice in the text
+// The trick is that all 'spare' substrings that can give us 
+// Lcp(i - 1, i) can be obtained by Lcp(i - 2, i - 1) 
+// due to the ordered nature of our array. And the overall answer is:
+// Lcp(0, 1) + Sum(max[0, Lcp(i, i - 1) - Lcp(i - 2, i - 1)]), 2 <= i < n
+void number_of_repeated_substrings(){
   int n = s.size();
   if(n==1){ cout << 0 << endl;  return; }
   for (int i=0; i<n; ++i) str[i] = s[i];
-  SuffixSort(n);
-  getHeight(n);
-  long long number_of_different_substrings = 0;
-  // If you have the i-th smaller suffix, Si, it's length will be |Si| = n - pos[i]
-  // Now, height[i] stores the number of common letters between Si and Si (s.substr(pos[i]) and s.substr(pos[i-1]))
-  // so, you have |Si| - height[i] different strings from these two suffixes => n - pos[i] - height[i]
-  // for (int i=0; i<n; ++i){      
-  //     number_of_different_substrings += n - pos[i] - height[i];
-  //   }
-  //cout << number_of_different_substrings << endl;
-  
-  // Print the suffix array
-  //   puts("Suffix Array");
-  //   string tmp;
-  //   for(int i=0;i<n;++i){
-  //       tmp = s.substr(pos[i]);
-  //       printf("pos[%d] = %2d \t suffix = %s \t height[%d] = %d\n",i,pos[i],tmp.c_str(), i, height[i]);
-  //   }
-  
-  // Number of substrings that appear at least twice in the text
-  // The trick is that all 'spare' substrings that can give us 
-  // Lcp(i - 1, i) can be obtained by Lcp(i - 2, i - 1) 
-  // due to the ordered nature of our array. And the overall answer is:
-  // Lcp(0, 1) + Sum(max[0, Lcp(i, i - 1) - Lcp(i - 2, i - 1)]), 2 <= i < n
+  //build suffix array and height array
   int cnt = height[1];
   for(int i=2;i<n;++i){
       cnt += max(0, height[i] - height[i-1]);
   }
-  cout << cnt << endl;
+  cout << cnt << endl;  
 }
 
-int main(){
-  int t;
-  while (cin >> s){
-      if(s=="*") break;
-      solve();
-  }
-  return 0;
-}
+// Given a string s and an int m, find the size
+// of the biggest substring repeated m times (find the rightmost pos)
+// if a string is repeated m+1 times, then it's repeated m times too
 
+// The answer is the maximum, over i, of the longest common prefix
+// between suffix i+m-1 in the sorted array.
+// remember that the lcp(x,y) = min(lcp(x,x+1), lcp(x+1, x+2), ... , lcp(y-1, y))
+
+void repeated_m_times(int m){
+    int n = strlen(str);//s.size();
+    //for (int i=0; i<n; ++i) str[i] = ss[i];
+    SuffixSort(n);
+    getHeight(n);
+    int length = 0, position = -1, t;
+    for(int i=0;i<=n-m;++i){
+	if((t=lcp(i,i+m-1,n)) > length){
+	    length = t;
+	    position = pos[i];
+	}else if(t == length) { position = max(position, pos[i]); }
+    }
+
+    // Here you'll get the rightmost position (that means, the last time the substring appears)
+    for(int i = 0; i < n; ){
+	if(pos[i] + length > n) {++i; continue;}
+	int ps = 0, j = i+1;
+	while(j<n && height[j] >= length){
+	    ps = max(ps,pos[j]);
+	    j++;
+	}
+	if(j - i >= m) position = max(position, ps);
+	i = j;
+    }
+    if(length != 0)
+	printf("%d %d\n", length, position);
+    else
+	puts("none");
+}
