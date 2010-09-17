@@ -200,7 +200,6 @@ void get_the_biggest_repeated_substring(){
   for(int i=0;i<n;++i) str[i] = s[i];
   SuffixSort(n);
   getHeight(n);
-  //print_suffix_array();
   int longest = 0, position = -1;
   for(int i=1;i<n;++i){
     if(longest < height[i]) { longest = height[i]; position = i - 1;}
