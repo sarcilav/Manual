@@ -1,0 +1,21 @@
+\BOOKMARK [1][-]{section.1}{DP}{}
+\BOOKMARK [2][-]{subsection.1.1}{Kadane}{section.1}
+\BOOKMARK [2][-]{subsection.1.2}{LIS}{section.1}
+\BOOKMARK [1][-]{section.2}{Geometr\355a}{}
+\BOOKMARK [2][-]{subsection.2.1}{Andes}{section.2}
+\BOOKMARK [2][-]{subsection.2.2}{Brasileros}{section.2}
+\BOOKMARK [2][-]{subsection.2.3}{Java}{section.2}
+\BOOKMARK [1][-]{section.3}{Grafos}{}
+\BOOKMARK [2][-]{subsection.3.1}{Topological Sort \(BFS\)}{section.3}
+\BOOKMARK [2][-]{subsection.3.2}{Longest Path in DAG}{section.3}
+\BOOKMARK [1][-]{section.4}{String Matching}{}
+\BOOKMARK [2][-]{subsection.4.1}{KMP}{section.4}
+\BOOKMARK [2][-]{subsection.4.2}{Suffix Arrays O\(n log n\)}{section.4}
+\BOOKMARK [2][-]{subsection.4.3}{Suffix Arrays 2 O\(n log n\)}{section.4}
+\BOOKMARK [2][-]{subsection.4.4}{Suffix Trees}{section.4}
+\BOOKMARK [1][-]{section.5}{Teor\355a de N\372meros}{}
+\BOOKMARK [2][-]{subsection.5.1}{Big Mod}{section.5}
+\BOOKMARK [2][-]{subsection.5.2}{GCD Extendido}{section.5}
+\BOOKMARK [2][-]{subsection.5.3}{Fibonacci O\(log n\)}{section.5}
+\BOOKMARK [2][-]{subsection.5.4}{Funci\363n Phi de Euler}{section.5}
+\BOOKMARK [2][-]{subsection.5.5}{Descomposici\363n en Factores Primos}{section.5}

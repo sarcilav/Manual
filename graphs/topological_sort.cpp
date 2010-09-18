@@ -1,4 +1,5 @@
-/** Creates an edge from u to v. This represents that task u comes before task v **/
+/** Creates an edge from u to v. This represents that task
+u comes before task v **/
 void add_edge(int u, int v){
     g[u].push_back(v);
     d[v]++;
