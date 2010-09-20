@@ -303,5 +303,6 @@ void smallest_rotation(){
       break;
     }
   }
-  printf("%d\n", pos[best]);
+  if(pos[best] == k) puts("0");
+  else printf("%d\n", pos[best]);
 }
