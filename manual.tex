@@ -1,0 +1,89 @@
+\documentclass[10pt,letterpaper,twocolumn,twosided]{article}
+%\documentclass[10pt,letterpaper]{article}
+% ---------------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{listings}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{amsmath}
+\usepackage{verbatim}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{geometry}
+%Poner la página en landscape
+\geometry{verbose,landscape,letterpaper,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm}
+
+\newcommand{\codigofuente}[1]{
+\verbatiminput{#1}
+\dotfill
+}
+\setlength{\columnsep}{0.25in}
+\setlength{\columnseprule}{1px}
+
+% ---------------------------------------------------------------
+\begin{document}
+% ---------------------------------------------------------------
+\title{Resumen de algoritmos para torneos de programación}
+\author{Loperamida Clorhidrato 2mg}
+\date{\today}
+\maketitle
+% ---------------------------------------------------------------
+
+% ---------------------------------------------------------------
+\tableofcontents
+% \lstlistoflistings
+\lstloadlanguages{C++}
+% ---------------------------------------------------------------
+\section{DP}
+\subsection{Kadane}
+\codigofuente{./dp/kadane.cpp}
+\subsection{LIS}
+\codigofuente{./dp/lis.cpp}
+% ---------------------------------------------------------------
+\section{Geometría}
+% ---------------------------------------------------------------
+\subsection{Andes}
+\codigofuente{./geometria/geometria.cpp}
+\subsection{Brasileros}
+\codigofuente{./geometria/geo.cpp}
+\subsection{Java}
+\codigofuente{./geometria/geojava.java}
+
+\section{Grafos}
+\subsection{Topological Sort (BFS)}
+\codigofuente{./graphs/topological_sort.cpp}
+
+\subsection{Longest Path in DAG}
+
+\codigofuente{./graphs/longest_path_in_dag.cpp}
+
+\section{String Matching}
+\subsection{KMP}
+\codigofuente{./string_matching/kmp.cpp}
+\subsection{Suffix Arrays O(n log n)}
+\codigofuente{./string_matching/suffix_arrays.cpp}
+\medskip
+\subsection{Suffix Arrays 2 O(n log n)}
+\codigofuente{./string_matching/suffarray.cpp}
+\medskip
+\subsection{Suffix Trees}
+\codigofuente{./string_matching/sufftree.cpp}
+
+\section{Teoría de Números}
+\subsection{Big Mod}
+\codigofuente{./teoria_numeros/bigMod.cpp}
+
+\subsection{GCD Extendido}
+\codigofuente{./teoria_numeros/extended_gcd.cpp}
+
+\subsection{Fibonacci O(log n)}
+\codigofuente{./teoria_numeros/fib.cpp}
+
+\subsection{Función Phi de Euler}
+\codigofuente{./teoria_numeros/phiEu.cpp}
+
+
+\subsection{Descomposición en Factores Primos}
+\codigofuente{./teoria_numeros/prim_factors.cpp}
+
+\end{document}
