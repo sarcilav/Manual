@@ -11,7 +11,7 @@ using namespace std;
 #define foreach(x, v) for (typeof (v).begin() x = (v).begin(); x != (v).end(); ++x)
 
 // Computes the jumping function
-int kmp_table(string &P){
+vector<int> kmp_table(string &P){
   int i = 1, j = 0;
   int m = P.size();
   vector<int> f(m);
@@ -24,29 +24,35 @@ int kmp_table(string &P){
     else
       f[i++] = 0;
   }
-  return f.back();
+  
+  return f;
+}
+
+void kmp(string &T, string &P){
+  vector<int> pi = kmp_table(P);
+  int n = T.size(), m = P.size();
+  int q = 0;
+  for(int i = 0; i<n;++i){
+    while(q > 0 and P[q+1] != T[i]){
+      q = pi[q];
+    }
+    if(P[q+1] == T[i]){
+      q++;
+    }
+    if(q + 1 == m){
+      if( i - m + 1 != -1)
+        printf("Match at %d\n", i - m + 1);
+      q = pi[q - 1];
+    }
+  }
 }
 
 int main(){
-  string P;
-  int k;
-  while(scanf("%d", &k) == 1){
-    if(k < 1) break;
-    cin >> P;
-    int N = P.size();
-    if( N > k) puts("0");
-    else if(N == k) puts("1");
-    else if(N == 1) printf("%d\n", k);
-    else{
-      int overlap = kmp_table(P);
-      int ans = 0;
-      if(overlap > 0){
-        ans++;
-        k-=N;
-      }
-      ans += ( k / (N-overlap) );
-      cout << ans << endl;
-    }
+  string T,P;
+  while(cin >> T >> P){
+    printf("Searching for %s \t in %s\n", P.c_str(), T.c_str());
+    kmp(T,P);
+    puts("***");
   }
   return 0;
 }
