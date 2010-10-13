@@ -10,49 +10,50 @@ using namespace std;
 
 #define foreach(x, v) for (typeof (v).begin() x = (v).begin(); x != (v).end(); ++x)
 
+typedef long long ll;
+
+string text, p;
+bool any = false;
 // Computes the jumping function
-vector<int> kmp_table(string &P){
-  int i = 1, j = 0;
+vector<long long> kmp_table(string &P){
+  int i = 0, j = -1;
   int m = P.size();
-  vector<int> f(m);
-  f[0] = 0;
+  vector<long long> f(m+1);
+  f[0] = -1;
   while( i < m ){
-    if(P[j] == P[i])
-      f[i++] = ++j;
-    else if(j>0)
-      j = f[j-1];
-    else
-      f[i++] = 0;
+    while(j>=0 and P[i] != P[j]) j = f[j];
+    f[++i] = ++j;
   }
-  
+  // puts("Failure function");
+  // for(int i=0;i<f.size();++i) printf("%d ", f[i]);
+  // puts("");
   return f;
 }
 
 void kmp(string &T, string &P){
-  vector<int> pi = kmp_table(P);
+  vector<long long> pi = kmp_table(P);
   int n = T.size(), m = P.size();
   int q = 0;
-  for(int i = 0; i<n;++i){
-    while(q > 0 and P[q+1] != T[i]){
+  for(int i = 0; i<n; ){
+    while(q > -1 and P[q] != T[i])  q = pi[q];
+    i++; q++;
+    if(q >= m ){
+      any = true;
+      printf("%d\n", i - q);
       q = pi[q];
-    }
-    if(P[q+1] == T[i]){
-      q++;
-    }
-    if(q + 1 == m){
-      if( i - m + 1 != -1)
-        printf("Match at %d\n", i - m + 1);
-      q = pi[q - 1];
     }
   }
 }
 
 int main(){
-  string T,P;
-  while(cin >> T >> P){
-    printf("Searching for %s \t in %s\n", P.c_str(), T.c_str());
-    kmp(T,P);
-    puts("***");
+  ll len;
+  while( scanf("%lli",&len) != EOF ){
+    any = false;
+    cin >> p >> text;
+    if( p.size() <= text.size() ){
+      kmp( text, p );
+      if(any) puts("");
+    }
   }
   return 0;
 }
