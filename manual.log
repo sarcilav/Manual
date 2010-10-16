@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2009.11.7)  18 SEP 2010 08:07
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2009.11.7)  16 OCT 2010 11:04
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -603,15 +603,38 @@ driver: pdftex
 (/usr/local/texlive/2009/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
-File: ./dp/kadane.cpp  (verbatim)
+File: ./bit/simple-binary-indexed-tree.cc  (verbatim)
 
-Underfull \vbox (badness 1009) has occurred while \output is active []
+Overfull \hbox (25.45114pt too wide) in paragraph at lines 39--39
+[]\OT1/cmtt/m/n/10 // In this implementation, the tree is represented by a vect
+or<int>.[] 
+ []
 
- [1{/usr/local/texlive/2009/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+Overfull \hbox (9.70128pt too wide) in paragraph at lines 39--39
+[]\OT1/cmtt/m/n/10 // tree[i] is sum of elements with indexes i&(i+1)..i, inclu
+sive.[] 
+ []
+
+
+Overfull \hbox (72.70073pt too wide) in paragraph at lines 39--39
+[]\OT1/cmtt/m/n/10 // (Note: this is a bit different from what is proposed in F
+enwick's article.[] 
+ []
+
+
+Overfull \hbox (25.45114pt too wide) in paragraph at lines 39--39
+[]\OT1/cmtt/m/n/10 // To see why it makes sense, think about the trailing 1's i
+n binary[] 
+ []
+
+[1{/usr/local/texlive/2009/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-Overfull \hbox (9.70128pt too wide) in paragraph at lines 39--39
+File: ./dp/kadane.cpp  (verbatim)
+
+Overfull \hbox (9.70128pt too wide) in paragraph at lines 42--42
 []\OT1/cmtt/m/n/10 // Cube has the actual input. If all numbers in cube are neg
 ative[] 
  []
@@ -619,102 +642,74 @@ ative[]
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [2]
 File: ./dp/lis.cpp  (verbatim)
 
-Overfull \hbox (4.45132pt too wide) in paragraph at lines 41--41
-[]    \OT1/cmtt/m/n/10 int d = upper_bound(M.begin(),M.begin()+n,S[i]) - M.begi
-n();[] 
+Overfull \hbox (14.95123pt too wide) in paragraph at lines 44--44
+[]      \OT1/cmtt/m/n/10 int d = upper_bound(M.begin(),M.begin()+n,S[i]) - M.be
+gin();[] 
  []
 
-[2]
 File: ./geometria/geometria.cpp  (verbatim)
 
-
-./manual.tex:46: Package inputenc Error: Unicode char \u8:ígo not set up for us
+./manual.tex:49: Package inputenc Error: Unicode char \u8:ígo not set up for us
 e with LaTeX.
 
 See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.46 \codigofuente{./geometria/geometria.cpp}
+l.49 \codigofuente{./geometria/geometria.cpp}
                                              ^^M
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-
-Overfull \hbox (35.95105pt too wide) in paragraph at lines 46--46
-[]\OT1/cmtt/m/n/10 // Area will return positive or negative depending on the po
-ints order[] 
- []
-
 File: ./geometria/geo.cpp  (verbatim)
-
-Overfull \hbox (46.45096pt too wide) in paragraph at lines 48--48
-[]    \OT1/cmtt/m/n/10 point operator + (const point &q) { return point (x + q.
-x, y+q.y) ;}[] 
+[3]
+Overfull \hbox (9.70128pt too wide) in paragraph at lines 51--51
+[]\OT1/cmtt/m/n/10 point operator+ (const point &q) {return point (x + q.x, y+q
+.y);}[] 
  []
 
 
-Overfull \hbox (72.70073pt too wide) in paragraph at lines 48--48
-[]    \OT1/cmtt/m/n/10 point operator  -  (const point &q) { return point (x - 
-q.x,  y-q.y)   ;}[] 
+Overfull \hbox (4.45132pt too wide) in paragraph at lines 51--51
+[]\OT1/cmtt/m/n/10 point operator- (const point &q){return point (x - q.x, y-q.
+y);}[] 
  []
 
 
-Overfull \hbox (20.20119pt too wide) in paragraph at lines 48--48
-[]    \OT1/cmtt/m/n/10 point operator * (const double &t)  {return point(x*t , 
-y*t); }[] 
+Overfull \hbox (9.70128pt too wide) in paragraph at lines 51--51
+[]\OT1/cmtt/m/n/10 double operator% (const point &q){return x*q.y-y*q.x;} //Cro
+ss Pr[] 
  []
 
 
-Overfull \hbox (30.7011pt too wide) in paragraph at lines 48--48
-[]    \OT1/cmtt/m/n/10 point operator  /  (const double &t) {return point(x/t ,
- y/t);  }[] 
+Overfull \hbox (4.45132pt too wide) in paragraph at lines 51--51
+[]  \OT1/cmtt/m/n/10 bool operator ==(const point &q) const { return cmp(q) == 
+0; }[] 
  []
 
 
-Overfull \hbox (77.95068pt too wide) in paragraph at lines 48--48
-[]    \OT1/cmtt/m/n/10 double operator *(const point &q)  { return x*q.x + y*q.
-y; } //Dot Product[] 
- []
-
-
-Overfull \hbox (83.20064pt too wide) in paragraph at lines 48--48
-[]    \OT1/cmtt/m/n/10 double operator %(const point &q) { return x*q.y - y*q.x
-; } //Cross Product[] 
- []
-
-
-Overfull \hbox (14.95123pt too wide) in paragraph at lines 48--48
-[]    \OT1/cmtt/m/n/10 bool operator ==(const point &q) const { return cmp(q) =
-= 0; }[] 
- []
-
-
-Overfull \hbox (20.20119pt too wide) in paragraph at lines 48--48
-[]    \OT1/cmtt/m/n/10 bool operator != (const point &q) const { return cmp(q) 
-!= 0; }[] 
- []
-
-
-Overfull \hbox (9.70128pt too wide) in paragraph at lines 48--48
-[]    \OT1/cmtt/m/n/10 bool operator < (const point &q) const { return cmp(q) <
+Overfull \hbox (9.70128pt too wide) in paragraph at lines 51--51
+[]  \OT1/cmtt/m/n/10 bool operator != (const point &q) const { return cmp(q) !=
  0; }[] 
  []
 
-[3]
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Overfull \hbox (14.95123pt too wide) in paragraph at lines 48--48
-[]    \OT1/cmtt/m/n/10 if(a ||b || p == r || p == s || q == r || q == s) return
- true;[] 
+Overfull \hbox (4.45132pt too wide) in paragraph at lines 51--51
+[]  \OT1/cmtt/m/n/10 if(a ||b || p == r || p == s || q == r || q == s) return t
+rue;[] 
  []
 
 
-Overfull \hbox (4.45132pt too wide) in paragraph at lines 48--48
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4]
+Overfull \hbox (4.45132pt too wide) in paragraph at lines 51--51
 []\OT1/cmtt/m/n/10 //En el exterior, en la frontera, en el interior respectivam
 ente[] 
  []
@@ -722,240 +717,88 @@ ente[]
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [4]
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Overfull \hbox (46.45096pt too wide) in paragraph at lines 48--48
-[]    \OT1/cmtt/m/n/10 return point (point(a.x , b.x) % c, point(a.y , b.y) % c
-) / (a % b);[] 
+ [5]
+Overfull \hbox (4.45132pt too wide) in paragraph at lines 51--51
+[]    \OT1/cmtt/m/n/10 point(point(a.x , b.x) % c, point(a.y , b.y) % c) / (a %
+ b);[] 
  []
 
 
-Overfull \hbox (4.45132pt too wide) in paragraph at lines 48--48
+Overfull \hbox (4.45132pt too wide) in paragraph at lines 51--51
 []\OT1/cmtt/m/n/10 //Encuentra el menor circulo que contiene todos los puntos d
 ados[] 
  []
 
 
-Overfull \hbox (46.45096pt too wide) in paragraph at lines 48--48
-[]    \OT1/cmtt/m/n/10 point a = p - r, b = q - r, c = point(a * (p+r) / 2, b *
- (q+r) / 2);[] 
- []
-
-
-Overfull \hbox (30.7011pt too wide) in paragraph at lines 48--48
-[]    \OT1/cmtt/m/n/10 return point(c % point(a.y, b.y), point(a.x, b.x) % c) /
- (a % b);[] 
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [5]
-Overfull \hbox (9.70128pt too wide) in paragraph at lines 48--48
-[]\OT1/cmtt/m/n/10 point p1 = P[a], p2 = P[(a+1) % n], q1 = Q[b], q2 = Q[(b+1) 
-% m];[] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-File: ./geometria/geojava.java  (verbatim)
  [6]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+File: ./geometria/geojava.java  (verbatim)
 
-
-Overfull \hbox (46.45096pt too wide) in paragraph at lines 50--50
-[]\OT1/cmtt/m/n/10 private static int inPolygon(Point p, Point[] polygon, int p
-olygonSize){[] 
- []
-
-
-Overfull \hbox (46.45096pt too wide) in paragraph at lines 50--50
-[]\OT1/cmtt/m/n/10 private static Point GetIntersection(Line2D.Double l1, Line2
-D.Double l2)[] 
+Overfull \hbox (14.95123pt too wide) in paragraph at lines 53--53
+[]    \OT1/cmtt/m/n/10 return cmp((p.substract(r)).crossProduct(q.substract(r))
+,0.0);[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 File: ./graphs/topological_sort.cpp  (verbatim)
-
-Overfull \hbox (182.94977pt too wide) in paragraph at lines 54--54
-[]                    \OT1/cmtt/m/n/10 return vector<int>(1,INT_MAX); // There'
-s a cycle. And no topsort can be made![] 
- []
-
-
-Overfull \hbox (51.70091pt too wide) in paragraph at lines 54--54
-[]                \OT1/cmtt/m/n/10 q.push(next); inside.insert(next); order.pus
-h_back(next);[] 
+ [8]
+Overfull \hbox (9.70128pt too wide) in paragraph at lines 57--57
+[]        \OT1/cmtt/m/n/10 q.push(next); inside.insert(next); order.push_back(n
+ext);[] 
  []
 
 File: ./graphs/longest_path_in_dag.cpp  (verbatim)
-[8]
-File: ./string_matching/kmp.cpp  (verbatim)
-
-Overfull \hbox (104.20045pt too wide) in paragraph at lines 62--62
-[]\OT1/cmtt/m/n/10 #define foreach(x, v) for (typeof (v).begin() x = (v).begin(
-); x != (v).end(); ++x)[] 
- []
-
-
-Overfull \hbox (4.45132pt too wide) in paragraph at lines 62--62
-[]    \OT1/cmtt/m/n/10 //printf("Looking for  %s  in  %s\n", W.c_str(), S.c_str
-());[] 
- []
-
-
-Overfull \hbox (93.70055pt too wide) in paragraph at lines 62--62
-[]    \OT1/cmtt/m/n/10 if(++i == w){s.insert(m); m--; }//printf("There's a matc
-h at %d\n", m); m--;}[] 
- []
-
-File: ./string_matching/suffix_arrays.cpp  (verbatim)
+File: ./lca/lca.cpp  (verbatim)
 [9]
-Overfull \hbox (119.95032pt too wide) in paragraph at lines 64--64
-[]\OT1/cmtt/m/n/10 template <class T> string toStr(const T &x){ stringstream s;
- s << x; return s.str(); }[] 
- []
+File: ./string_matching/kmp.cpp  (verbatim)
+File: ./string_matching/suffix_arrays.cpp  (verbatim)
 
-
-Overfull \hbox (151.45004pt too wide) in paragraph at lines 64--64
-[]\OT1/cmtt/m/n/10 template <class T> int toInt(const T &x){ stringstream s; s 
-<< x; int r; s >> r; return r; }[] 
- []
-
-
-Overfull \hbox (104.20045pt too wide) in paragraph at lines 64--64
-[]\OT1/cmtt/m/n/10 #define foreach(x, v) for (typeof (v).begin() x = (v).begin(
-); x != (v).end(); ++x)[] 
- []
-
-
-Overfull \hbox (51.70091pt too wide) in paragraph at lines 64--64
-[]\OT1/cmtt/m/n/10 // Call SuffixSort(n), where n is the length of the string s
-tored in str.[] 
- []
-
-
-Overfull \hbox (140.95013pt too wide) in paragraph at lines 64--64
-[]\OT1/cmtt/m/n/10 // pos = The suffix array. Contains the n suffixes of str so
-rted in lexicographical order.[] 
- []
-
-
-Overfull \hbox (161.94995pt too wide) in paragraph at lines 64--64
-[]\OT1/cmtt/m/n/10 //       Each suffix is represented as a single integer (the
- position of str where it starts).[] 
- []
-
-
-Overfull \hbox (119.95032pt too wide) in paragraph at lines 64--64
-[]\OT1/cmtt/m/n/10 // rank = The inverse of the suffix array. rank[i] = the ind
-ex of the suffix str[i..n)[] 
- []
-
-
-Overfull \hbox (51.70091pt too wide) in paragraph at lines 64--64
-[]\OT1/cmtt/m/n/10 //        in the pos array. (In other words, pos[i] = k <==>
- rank[k] = i)[] 
- []
-
-
-Overfull \hbox (151.45004pt too wide) in paragraph at lines 64--64
+Overfull \hbox (4.45132pt too wide) in paragraph at lines 70--70
 []\OT1/cmtt/m/n/10 //        With this array, you can compare two suffixes in O
-(1): Suffix str[i..n) is smaller[] 
+(1):[] 
  []
 
-
+[10]
 Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \hbox (41.201pt too wide) in paragraph at lines 64--64
-[]  \OT1/cmtt/m/n/10 //{pos contains the list of suffixes sorted by their first
- character}[] 
- []
-
-
-Overfull \hbox (172.44986pt too wide) in paragraph at lines 64--64
-[]    \OT1/cmtt/m/n/10 //{bh[i] == false if the first h characters of pos[i-1] 
-== the first h characters of pos[i]}[] 
- []
-
-
-Overfull \hbox (167.1999pt too wide) in paragraph at lines 64--64
-[]    \OT1/cmtt/m/n/10 //{suffixes are separted in buckets containing strings s
-tarting with the same h characters}[] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [10]
-Overfull \hbox (46.45096pt too wide) in paragraph at lines 64--64
-[]          \OT1/cmtt/m/n/10 for (int k = rank[s]+1; !bh[k] && b2h[k]; k++) b2h
-[k] = false;[] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \hbox (125.20027pt too wide) in paragraph at lines 64--64
-[]\OT1/cmtt/m/n/10 // height[i] = length of the longest common prefix of suffix
- pos[i] and suffix pos[i-1][] 
- []
-
-
-Overfull \hbox (9.70128pt too wide) in paragraph at lines 64--64
-[]      \OT1/cmtt/m/n/10 while (i + h < n && j + h < n && str[i+h] == str[j+h])
- h++;[] 
- []
-
-
-Overfull \hbox (46.45096pt too wide) in paragraph at lines 64--64
-[]\OT1/cmtt/m/n/10 // Gets the longest common prefix from Sx and Sy in a string
- of lenght n[] 
- []
-
-
-Overfull \hbox (135.70018pt too wide) in paragraph at lines 64--64
-[]  \OT1/cmtt/m/n/10 for(int i = x+1; i<=y; ++i) if (height[i] != 0) lc = min(l
-c, height[i]); else return 0;[] 
- []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11]
-Overfull \hbox (188.19972pt too wide) in paragraph at lines 64--64
-[]    \OT1/cmtt/m/n/10 printf("pos[%d] = %2d \t suffix = %s \t height[%d] = %d\
-n",i,pos[i],tmp.c_str(), i, height[i]);[] 
+Overfull \hbox (9.70128pt too wide) in paragraph at lines 70--70
+[]      \OT1/cmtt/m/n/10 while (i + h < n && j + h < n && str[i+h] == str[j+h])
+ h++;[] 
  []
 
 
-Overfull \hbox (25.45114pt too wide) in paragraph at lines 64--64
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (25.45114pt too wide) in paragraph at lines 70--70
 []  \OT1/cmtt/m/n/10 if(W != s.substr(pos[r], W.size())) return -1; // not here
  at all![] 
  []
 
 
-Overfull \hbox (20.20119pt too wide) in paragraph at lines 64--64
+Overfull \hbox (20.20119pt too wide) in paragraph at lines 70--70
 []\OT1/cmtt/m/n/10 // Get the biggest repeated substring and how many times it 
 appears[] 
  []
 
 
-Overfull \hbox (93.70055pt too wide) in paragraph at lines 64--64
-[]\OT1/cmtt/m/n/10 // First, get the biggest repeated string (it's, obviously t
-he biggest height[i])[] 
- []
-
-
-Overfull \hbox (30.7011pt too wide) in paragraph at lines 64--64
+Overfull \hbox (30.7011pt too wide) in paragraph at lines 70--70
 []    \OT1/cmtt/m/n/10 if(longest < height[i]) { longest = height[i]; position 
 = i - 1;}[] 
  []
@@ -963,137 +806,75 @@ Overfull \hbox (30.7011pt too wide) in paragraph at lines 64--64
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Overfull \hbox (20.20119pt too wide) in paragraph at lines 64--64
-[]    \OT1/cmtt/m/n/10 cout << s.substr(pos[position], longest) << " " << cnt <
-< endl;[] 
- []
+ [12]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Overfull \hbox (93.70055pt too wide) in paragraph at lines 64--64
-[]\OT1/cmtt/m/n/10 // If you have the i-th smaller suffix, Si, it's length will
- be |Si| = n - pos[i][] 
- []
-
-
-Overfull \hbox (261.69908pt too wide) in paragraph at lines 64--64
-[]\OT1/cmtt/m/n/10 // Now, height[i] stores the number of common letters betwee
-n Si and Si (s.substr(pos[i]) and s.substr(pos[i-1]))[] 
- []
-
-
-Overfull \hbox (193.44968pt too wide) in paragraph at lines 64--64
-[]\OT1/cmtt/m/n/10 // so, you have |Si| - height[i] different strings from thes
-e two suffixes => n - pos[i] - height[i][] 
- []
-
-
-Overfull \hbox (72.70073pt too wide) in paragraph at lines 64--64
-[]  \OT1/cmtt/m/n/10 //for (int i=0; i<n; ++i) str[i] = s[i]; uncomment if read
-ing s and not str[] 
- []
-
-
-Overfull \hbox (30.7011pt too wide) in paragraph at lines 64--64
-[]\OT1/cmtt/m/n/10 // due to the ordered nature of our array. And the overall a
-nswer is:[] 
- []
-
-
-Overfull \hbox (51.70091pt too wide) in paragraph at lines 64--64
-[]\OT1/cmtt/m/n/10 // Lcp(0, 1) + Sum(max[0, Lcp(i, i - 1) - Lcp(i - 2, i - 1)]
-), 2 <= i < n[] 
- []
-
-
-Overfull \hbox (72.70073pt too wide) in paragraph at lines 64--64
-[]  \OT1/cmtt/m/n/10 //for (int i=0; i<n; ++i) str[i] = s[i]; uncomment if read
-ing s and not str[] 
- []
-
-
-Overfull \hbox (30.7011pt too wide) in paragraph at lines 64--64
+Overfull \hbox (30.7011pt too wide) in paragraph at lines 70--70
 []\OT1/cmtt/m/n/10 // of the biggest substring repeated m times (find the right
 most pos)[] 
  []
 
 
-Overfull \hbox (25.45114pt too wide) in paragraph at lines 64--64
+Overfull \hbox (25.45114pt too wide) in paragraph at lines 70--70
 []\OT1/cmtt/m/n/10 // if a string is repeated m+1 times, then it's repeated m t
 imes too[] 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [12]
-Overfull \hbox (14.95123pt too wide) in paragraph at lines 64--64
+Overfull \hbox (14.95123pt too wide) in paragraph at lines 70--70
 []\OT1/cmtt/m/n/10 // The answer is the maximum, over i, of the longest common 
 prefix[] 
  []
 
 
-Overfull \hbox (93.70055pt too wide) in paragraph at lines 64--64
-[]\OT1/cmtt/m/n/10 // remember that the lcp(x,y) = min(lcp(x,x+1), lcp(x+1, x+2
-), ... , lcp(y-1, y))[] 
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Overfull \hbox (156.7pt too wide) in paragraph at lines 64--64
-[]  \OT1/cmtt/m/n/10 // Here you'll get the rightmost position (that means, the
- last time the substring appears)[] 
- []
-
-
-Overfull \hbox (125.20027pt too wide) in paragraph at lines 64--64
-[]\OT1/cmtt/m/n/10 // Reads a string of lenght k. Then just double it (s = s+s)
- and find the suffix arrays[] 
- []
-
-
-Overfull \hbox (4.45132pt too wide) in paragraph at lines 64--64
+ [13]
+Overfull \hbox (4.45132pt too wide) in paragraph at lines 70--70
 []\OT1/cmtt/m/n/10 // The answer is the smallest i for which s.size() - pos[i] 
 >= k[] 
  []
 
-
-Overfull \hbox (114.70036pt too wide) in paragraph at lines 64--64
-[]\OT1/cmtt/m/n/10 // If you want the first appearence (and not the string) you
-'ll need the second cycle[] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-No file ./string_matching/suffarray.cpp.
-No file ./string_matching/sufftree.cpp.
 File: ./teoria_numeros/bigMod.cpp  (verbatim)
-
-Overfull \hbox (77.95068pt too wide) in paragraph at lines 74--74
-[]  \OT1/cmtt/m/n/10 else if (p%2 == 0) return square(bigmod (b,p/2,m)) % m; //
- square(x) = x * x[] 
- []
-
 File: ./teoria_numeros/extended_gcd.cpp  (verbatim)
-[13]
 File: ./teoria_numeros/fib.cpp  (verbatim)
+[14]
 File: ./teoria_numeros/phiEu.cpp  (verbatim)
 File: ./teoria_numeros/prim_factors.cpp  (verbatim)
+File: ./segment-tree/segment.cpp  (verbatim)
 
-Overfull \hbox (56.95087pt too wide) in paragraph at lines 87--87
-[]\OT1/cmtt/m/n/10 void sqeeze(prime_map &M, int &n, int p) { for ( ; n%p ==0 ;
-n/=p) M[p]++;}[] 
+Overfull \hbox (25.45114pt too wide) in paragraph at lines 91--91
+[]\OT1/cmtt/m/n/10 int node = 0, left = 0, right = n - 1; //intervalo inicial [
+0, n -1][] 
  []
 
-[14] [15
+[15]
+Overfull \hbox (4.45132pt too wide) in paragraph at lines 91--91
+[]\OT1/cmtt/m/n/10 la funcion es tal que node representa el intervalo [left, ri
+ght][] 
+ []
+
+
+Overfull \hbox (9.70128pt too wide) in paragraph at lines 91--91
+[]\OT1/cmtt/m/n/10 // si el segmento [left, right] es parte de lo que queremos 
+sumar[] 
+ []
+
+
+Overfull \hbox (9.70128pt too wide) in paragraph at lines 91--91
+[]\OT1/cmtt/m/n/10 res += sum(max(mid + 1, from), to, node * 2 + 2, mid + 1, ri
+ght);[] 
+ []
+
+[16
 
 ] (./manual.aux) ) 
 Here is how much of TeX's memory you used:
- 7428 strings out of 493848
- 105084 string characters out of 3149207
- 209040 words of memory out of 3000000
- 10549 multiletter control sequences out of 15000+200000
+ 7442 strings out of 493848
+ 105281 string characters out of 3149207
+ 209169 words of memory out of 3000000
+ 10554 multiletter control sequences out of 15000+200000
  9191 words of font info for 34 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  38i,8n,36p,269b,440s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1104,9 +885,9 @@ s/cm/cmbx12.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts
 m/cmr12.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmr17.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 tt10.pfb>
-Output written on manual.pdf (15 pages, 137483 bytes).
+Output written on manual.pdf (16 pages, 145133 bytes).
 PDF statistics:
- 210 PDF objects out of 1000 (max. 8388607)
- 38 named destinations out of 1000 (max. 500000)
- 169 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 229 PDF objects out of 1000 (max. 8388607)
+ 42 named destinations out of 1000 (max. 500000)
+ 193 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,10 +1,3 @@
-#include <cstdio>
-#include <vector>
-#include <iostream>
-#include <string>
-using namespace std;
-
-
 // RMQ will find the POSITION of the
 // smallest integer inside an array A
 // between A[i] and A[j] (inclusive)
@@ -25,22 +18,8 @@ void preprocess1(){
   for(i = 0; i<N; ++i)
     for(j = i+1; j<N; ++j)
       // Leave the <= if you want the leftmost position
-      if(A[M[i][j-1]] <= A[j]) 
-        M[i][j] = M[i][j] = M[i][j-1];
-      else
-        M[i][j] = j;
-}
-
-
-
-int main(){
-  string a = "2431678917";
-  for(int i=0;i<a.size();++i) A[i] = a[i] - '0';
-  preprocess1();
-  for(int i=0;i<N;++i){
-    for(int j = 0; j<N; ++j)
-      cout << M[i][j] << "\t";
-    puts("");
-  }
-  return 0;
+    if(A[M[i][j-1]] <= A[j]) 
+    M[i][j] = M[i][j] = M[i][j-1];
+  else
+    M[i][j] = j;
 }

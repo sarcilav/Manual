@@ -1,17 +1,3 @@
-#include <iostream>
-#include <cstdio>
-#include <cstring>
-#include <string>
-#include <vector>
-#include <cassert>
-#include <set>
-
-using namespace std;
-
-#define foreach(x, v) for (typeof (v).begin() x = (v).begin(); x != (v).end(); ++x)
-
-string text, p;
-bool any = false;
 // Computes the jumping function
 vector<int> kmp_table(string &P){
   int i = 0, j = -1;

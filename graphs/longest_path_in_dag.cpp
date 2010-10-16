@@ -12,20 +12,20 @@ int dfs(node root)
   s.push(root);
   int ans = 0;
   while(s.size())
+  {
+    node actual = s.top();
+    visited[actual.index] = true;
+    s.pop();
+    int weight = actual.weight;
+    if(weight > ans)
     {
-      node actual = s.top();
-      visited[actual.index] = true;
-      s.pop();
-      int weight = actual.weight;
-      if(weight > ans)
-	{
-	  ans = weight;
-	  best = actual;
-	}
-      //for para cada vecino)
-	  if(can_go(vecino))
-	    s.push(vecino);
+      ans = weight;
+      best = actual;
     }
+      //for para cada vecino)
+    if(can_go(vecino))
+      s.push(vecino);
+  }
   return ans;
 }
 int max_path_dag()
