@@ -10,28 +10,23 @@ using namespace std;
 
 #define foreach(x, v) for (typeof (v).begin() x = (v).begin(); x != (v).end(); ++x)
 
-typedef long long ll;
-
 string text, p;
 bool any = false;
 // Computes the jumping function
-vector<long long> kmp_table(string &P){
+vector<int> kmp_table(string &P){
   int i = 0, j = -1;
   int m = P.size();
-  vector<long long> f(m+1);
+  vector<int> f(m+1);
   f[0] = -1;
   while( i < m ){
     while(j>=0 and P[i] != P[j]) j = f[j];
     f[++i] = ++j;
   }
-  // puts("Failure function");
-  // for(int i=0;i<f.size();++i) printf("%d ", f[i]);
-  // puts("");
   return f;
 }
 
 void kmp(string &T, string &P){
-  vector<long long> pi = kmp_table(P);
+  vector<int> pi = kmp_table(P);
   int n = T.size(), m = P.size();
   int q = 0;
   for(int i = 0; i<n; ){
@@ -46,14 +41,18 @@ void kmp(string &T, string &P){
 }
 
 int main(){
-  ll len;
-  while( scanf("%lli",&len) != EOF ){
-    any = false;
-    cin >> p >> text;
-    if( p.size() <= text.size() ){
-      kmp( text, p );
-      if(any) puts("");
-    }
-  }
+  int T, C=1;
+  string s,t;
+  while(scanf("%d", &T)){
+    if(T==0) break;
+    printf("Test case #%d\n", C++);
+    cin >> s;
+    vector<int>pi = kmp_table(s);
+    for(int i=1;i<=T;++i)
+      if(pi[i] > 0)
+        if(i % (i-pi[i]) == 0)
+          printf("%d %d\n", i, i/(i-pi[i]));
+    puts("");
+  }  
   return 0;
 }

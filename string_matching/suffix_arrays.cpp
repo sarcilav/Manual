@@ -26,7 +26,7 @@ template <class T> int toInt(const T &x){ stringstream s; s << x; int r; s >> r;
 #define foreach(x, v) for (typeof (v).begin() x = (v).begin(); x != (v).end(); ++x)
 #define D(x) cout << #x " = " << (x) << endl
 
-const int N = 50005;
+const int N = 1000001;
 // Begins Suffix Arrays implementation
 // O(n log n) - Manber and Myers algorithm
 
