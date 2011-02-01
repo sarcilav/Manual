@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2009.11.7)  16 OCT 2010 11:04
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2009.11.7)  1 FEB 2011 11:31
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -504,7 +504,7 @@ Package: geometry 2008/12/21 v4.2 Page Geometry
 LaTeX Warning: Unused global option(s):
     [twosided].
 
-(./manual.aux)
+No file manual.aux.
 \openout1 = `manual.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
@@ -522,7 +522,6 @@ LaTeX Font Info:    ... okay on input line 24.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
 LaTeX Font Info:    ... okay on input line 24.
 \c@lstlisting=\count121
-
 (/usr/local/texlive/2009/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count122
@@ -547,8 +546,6 @@ Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
 LaTeX Info: Redefining \ref on input line 24.
 LaTeX Info: Redefining \pageref on input line 24.
-
-(./manual.out) (./manual.out)
 \@outlinefile=\write3
 \openout3 = `manual.out'.
 
@@ -595,10 +592,8 @@ driver: pdftex
 \@twocolumntrue 
 (1in=72.27pt, 1cm=28.45pt)
 -----------------------
-(./manual.toc)
 \tf@toc=\write4
 \openout4 = `manual.toc'.
-
 
 (/usr/local/texlive/2009/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
@@ -628,21 +623,19 @@ Overfull \hbox (25.45114pt too wide) in paragraph at lines 39--39
 n binary[] 
  []
 
+File: ./dp/kadane.cpp  (verbatim)
 [1{/usr/local/texlive/2009/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-File: ./dp/kadane.cpp  (verbatim)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 Overfull \hbox (9.70128pt too wide) in paragraph at lines 42--42
 []\OT1/cmtt/m/n/10 // Cube has the actual input. If all numbers in cube are neg
 ative[] 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [2]
 File: ./dp/lis.cpp  (verbatim)
 
 Overfull \hbox (14.95123pt too wide) in paragraph at lines 44--44
@@ -650,7 +643,9 @@ Overfull \hbox (14.95123pt too wide) in paragraph at lines 44--44
 gin();[] 
  []
 
+[2]
 File: ./geometria/geometria.cpp  (verbatim)
+
 
 ./manual.tex:49: Package inputenc Error: Unicode char \u8:ígo not set up for us
 e with LaTeX.
@@ -666,7 +661,7 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 File: ./geometria/geo.cpp  (verbatim)
-[3]
+
 Overfull \hbox (9.70128pt too wide) in paragraph at lines 51--51
 []\OT1/cmtt/m/n/10 point operator+ (const point &q) {return point (x + q.x, y+q
 .y);}[] 
@@ -696,7 +691,7 @@ Overfull \hbox (9.70128pt too wide) in paragraph at lines 51--51
  0; }[] 
  []
 
-
+[3]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -706,9 +701,6 @@ rue;[]
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4]
 Overfull \hbox (4.45132pt too wide) in paragraph at lines 51--51
 []\OT1/cmtt/m/n/10 //En el exterior, en la frontera, en el interior respectivam
 ente[] 
@@ -717,10 +709,10 @@ ente[]
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
+ [4]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [5]
+
 Overfull \hbox (4.45132pt too wide) in paragraph at lines 51--51
 []    \OT1/cmtt/m/n/10 point(point(a.x , b.x) % c, point(a.y , b.y) % c) / (a %
  b);[] 
@@ -735,11 +727,13 @@ ados[]
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
+ [5]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [6]
 File: ./geometria/geojava.java  (verbatim)
+ [6]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 Overfull \hbox (14.95123pt too wide) in paragraph at lines 53--53
 []    \OT1/cmtt/m/n/10 return cmp((p.substract(r)).crossProduct(q.substract(r))
@@ -750,34 +744,98 @@ Overfull \hbox (14.95123pt too wide) in paragraph at lines 53--53
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 File: ./graphs/topological_sort.cpp  (verbatim)
- [8]
+
 Overfull \hbox (9.70128pt too wide) in paragraph at lines 57--57
 []        \OT1/cmtt/m/n/10 q.push(next); inside.insert(next); order.push_back(n
 ext);[] 
  []
 
 File: ./graphs/longest_path_in_dag.cpp  (verbatim)
+[8]
 File: ./lca/lca.cpp  (verbatim)
-[9]
+File: ./lca/lubenica.cpp  (verbatim)
+ [9]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+File: ./lca/hackers.cpp  (verbatim)
+
+Overfull \hbox (88.45059pt too wide) in paragraph at lines 68--68
+[]\OT1/cmtt/m/n/10 //maxi[a][b] = m^^Saxima arista entre a y los pap^^Sas de a 
+hasta una distancia de 2^b[] 
+ []
+
+
+Overfull \hbox (41.201pt too wide) in paragraph at lines 68--68
+[]\OT1/cmtt/m/n/10 int maxi[3000][20], pai[3000], inf = 1 << 30, dist[3000], pp
+[3000][20];[] 
+ []
+
+
+Overfull \hbox (35.95105pt too wide) in paragraph at lines 68--68
+[]\OT1/cmtt/m/n/10 // maxi[i][j] es un camino de tama~no 2^j. Entonces lo parti
+mos en dos.[] 
+ []
+
+[11]
+Overfull \hbox (30.7011pt too wide) in paragraph at lines 68--68
+[]\OT1/cmtt/m/n/10 // el primer argumento es la primera parte del camino (lo m^
+^Sas arriba)[] 
+ []
+
+
+Overfull \hbox (93.70055pt too wide) in paragraph at lines 68--68
+[]\OT1/cmtt/m/n/10 // y el seguno argumento es la segunda parte (lo m^^Sas abaj
+o. M^^Sas cerca del nodo i)[] 
+ []
+
+
+Overfull \hbox (104.20045pt too wide) in paragraph at lines 68--68
+[]\OT1/cmtt/m/n/10 // maxi[i][0] = peso para llegar a i desde el pap^^Sa (2^0 =
+ 1, pap^^Sa a 1 de distancia)[] 
+ []
+
+
+Overfull \hbox (14.95123pt too wide) in paragraph at lines 68--68
+[]      \OT1/cmtt/m/n/10 maxi[i][j] = max(maxi[pp[i][j - 1]][j - 1], maxi[i][j 
+- 1]);[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (109.45041pt too wide) in paragraph at lines 68--68
+[]      \OT1/cmtt/m/n/10 int w = edges[i].first, u = edges[i].second.first, v =
+ edges[i].second.second;[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12]
 File: ./string_matching/kmp.cpp  (verbatim)
 File: ./string_matching/suffix_arrays.cpp  (verbatim)
 
-Overfull \hbox (4.45132pt too wide) in paragraph at lines 70--70
+Overfull \hbox (4.45132pt too wide) in paragraph at lines 75--75
 []\OT1/cmtt/m/n/10 //        With this array, you can compare two suffixes in O
 (1):[] 
  []
 
-[10]
+[13]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [11]
-Overfull \hbox (9.70128pt too wide) in paragraph at lines 70--70
+ [14]
+Overfull \hbox (9.70128pt too wide) in paragraph at lines 75--75
 []      \OT1/cmtt/m/n/10 while (i + h < n && j + h < n && str[i+h] == str[j+h])
  h++;[] 
  []
@@ -786,19 +844,19 @@ Overfull \hbox (9.70128pt too wide) in paragraph at lines 70--70
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Overfull \hbox (25.45114pt too wide) in paragraph at lines 70--70
+Overfull \hbox (25.45114pt too wide) in paragraph at lines 75--75
 []  \OT1/cmtt/m/n/10 if(W != s.substr(pos[r], W.size())) return -1; // not here
  at all![] 
  []
 
 
-Overfull \hbox (20.20119pt too wide) in paragraph at lines 70--70
+Overfull \hbox (20.20119pt too wide) in paragraph at lines 75--75
 []\OT1/cmtt/m/n/10 // Get the biggest repeated substring and how many times it 
 appears[] 
  []
 
 
-Overfull \hbox (30.7011pt too wide) in paragraph at lines 70--70
+Overfull \hbox (30.7011pt too wide) in paragraph at lines 75--75
 []    \OT1/cmtt/m/n/10 if(longest < height[i]) { longest = height[i]; position 
 = i - 1;}[] 
  []
@@ -806,23 +864,23 @@ Overfull \hbox (30.7011pt too wide) in paragraph at lines 70--70
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [12]
+ [15]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Overfull \hbox (30.7011pt too wide) in paragraph at lines 70--70
+Overfull \hbox (30.7011pt too wide) in paragraph at lines 75--75
 []\OT1/cmtt/m/n/10 // of the biggest substring repeated m times (find the right
 most pos)[] 
  []
 
 
-Overfull \hbox (25.45114pt too wide) in paragraph at lines 70--70
+Overfull \hbox (25.45114pt too wide) in paragraph at lines 75--75
 []\OT1/cmtt/m/n/10 // if a string is repeated m+1 times, then it's repeated m t
 imes too[] 
  []
 
 
-Overfull \hbox (14.95123pt too wide) in paragraph at lines 70--70
+Overfull \hbox (14.95123pt too wide) in paragraph at lines 75--75
 []\OT1/cmtt/m/n/10 // The answer is the maximum, over i, of the longest common 
 prefix[] 
  []
@@ -830,8 +888,8 @@ prefix[]
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13]
-Overfull \hbox (4.45132pt too wide) in paragraph at lines 70--70
+ [16]
+Overfull \hbox (4.45132pt too wide) in paragraph at lines 75--75
 []\OT1/cmtt/m/n/10 // The answer is the smallest i for which s.size() - pos[i] 
 >= k[] 
  []
@@ -839,55 +897,54 @@ Overfull \hbox (4.45132pt too wide) in paragraph at lines 70--70
 File: ./teoria_numeros/bigMod.cpp  (verbatim)
 File: ./teoria_numeros/extended_gcd.cpp  (verbatim)
 File: ./teoria_numeros/fib.cpp  (verbatim)
-[14]
+[17]
 File: ./teoria_numeros/phiEu.cpp  (verbatim)
 File: ./teoria_numeros/prim_factors.cpp  (verbatim)
 File: ./segment-tree/segment.cpp  (verbatim)
 
-Overfull \hbox (25.45114pt too wide) in paragraph at lines 91--91
+Overfull \hbox (25.45114pt too wide) in paragraph at lines 96--96
 []\OT1/cmtt/m/n/10 int node = 0, left = 0, right = n - 1; //intervalo inicial [
 0, n -1][] 
  []
 
-[15]
-Overfull \hbox (4.45132pt too wide) in paragraph at lines 91--91
+[18]
+Overfull \hbox (4.45132pt too wide) in paragraph at lines 96--96
 []\OT1/cmtt/m/n/10 la funcion es tal que node representa el intervalo [left, ri
 ght][] 
  []
 
 
-Overfull \hbox (9.70128pt too wide) in paragraph at lines 91--91
+Overfull \hbox (9.70128pt too wide) in paragraph at lines 96--96
 []\OT1/cmtt/m/n/10 // si el segmento [left, right] es parte de lo que queremos 
 sumar[] 
  []
 
 
-Overfull \hbox (9.70128pt too wide) in paragraph at lines 91--91
+Overfull \hbox (9.70128pt too wide) in paragraph at lines 96--96
 []\OT1/cmtt/m/n/10 res += sum(max(mid + 1, from), to, node * 2 + 2, mid + 1, ri
 ght);[] 
  []
 
-[16
+[19
 
 ] (./manual.aux) ) 
 Here is how much of TeX's memory you used:
- 7442 strings out of 493848
- 105281 string characters out of 3149207
- 209169 words of memory out of 3000000
- 10554 multiletter control sequences out of 15000+200000
- 9191 words of font info for 34 fonts, out of 3000000 for 9000
+ 7416 strings out of 493848
+ 104923 string characters out of 3149207
+ 207699 words of memory out of 3000000
+ 10530 multiletter control sequences out of 15000+200000
+ 8429 words of font info for 31 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 38i,8n,36p,269b,440s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,8n,36p,269b,441s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmbx10.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmbx12.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr10.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr12.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr17.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-tt10.pfb>
-Output written on manual.pdf (16 pages, 145133 bytes).
+ts/cm/cmbx12.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr10.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr12.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr17.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mtt10.pfb>
+Output written on manual.pdf (19 pages, 112646 bytes).
 PDF statistics:
- 229 PDF objects out of 1000 (max. 8388607)
- 42 named destinations out of 1000 (max. 500000)
- 193 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 144 PDF objects out of 1000 (max. 8388607)
+ 47 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
