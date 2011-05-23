@@ -1,5 +1,3 @@
-
-
 long bigmod(long b, long p, long m){
   if (p == 0) return 1;
   // square(x) = x * x

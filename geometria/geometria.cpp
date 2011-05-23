@@ -25,7 +25,7 @@ pair<double, double> centroide(vector<vector<double> > &pt){
   for(int i = 0, j = 1, t = pt.size(); i<t; i++, 
     j = j+1 ==t ? 0 : j+1)
     for(int k = 0; k<2;k++)
-    p[k] += (pt[i][k] + pt[j][k]) * \
-    (pt[i][0] * pt[j][1] - pt[j][0] * pt[i][1]);
+    p[k] += (pt[i][k] + pt[j][k]) * 
+      (pt[i][0] * pt[j][1] - pt[j][0] * pt[i][1]);
   return pair<double, double>(pt[0]/d, pt[1]/d);
 }

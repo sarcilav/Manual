@@ -1,38 +1,10 @@
-#include <iostream>
-#include <set>
-#include <map>
-#include <queue>
-#include <stack>
-#include <algorithm>
-#include <vector>
-#include <string>
-#include <cstdlib>
-#include <cstdio>
-#include <cstring>
-#include <cmath>
-using namespace std;
-
 #define sz(A) (int)(A).size()
-#define vs vector<string>
-#define vi vector<int>
-#define ll long long
 #define FOR(A,B) for(int A=0; A < (int) (B);A++)
 #define pb push_back
-#define pii pair<int,int>
-#define F first
-#define S second
-#define all(x) x.begin() , x.end()
-
 #define N 100000
 #define inf 10000001
-
-int dist[N];
-int pai[N];
-int pp[N][20];
-int mini[N][20];
-int maxi[N][20];
-int n;
-
+int dist[N], pai[N], pp[N][20], mini[N][20];
+int maxi[N][20], n;
 struct X {
   int v,c;
 };
@@ -43,9 +15,7 @@ X no(int a, int b) {
   x.c = b;
   return x;
 }
-
 vector< X > adj[N];
-
 void dfs(int v, int p, int f, int c) {
   pai[v] = f;
   dist[v] = p;
@@ -92,12 +62,12 @@ int resolve(int a, int b) {
   int log;
   for(log = 1; (1<<log) <= dist[a]; log++);
   log--;
-  for(int i=log; i >= 0; i--) 
-  if(dist[a] - (1<<i) >= dist[b]) {
-    rmini = min(rmini, mini[a][i]);
-    rmaxi = max(rmaxi, maxi[a][i]);
-    a = pp[a][i];
-  }
+  for(int i=log; i >= 0; i--)
+    if(dist[a] - (1<<i) >= dist[b]) {
+      rmini = min(rmini, mini[a][i]);
+      rmaxi = max(rmaxi, maxi[a][i]);
+      a = pp[a][i];
+    }
 
   if(a == b) {
     printf("%d %d\n", rmini, rmaxi);

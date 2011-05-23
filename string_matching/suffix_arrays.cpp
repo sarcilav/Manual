@@ -1,12 +1,10 @@
 const int N = 1000001;
 // Begins Suffix Arrays implementation
 // O(n log n) - Manber and Myers algorithm
-
 //Usage:
 // Fill str with the characters of the string.
 // Call SuffixSort(n) where n = str.size()
 // That's it!
-
 //Output:
 // pos = The suffix array. It has n suffixes
 //       Contains the suffixes sorted in lexicographical order.
@@ -19,22 +17,18 @@ const int N = 1000001;
 //        With this array, you can compare two suffixes in O(1):
 //        Suffix str[i..n) is smaller
 //        than str[j..n) if and only if rank[i] < rank[j]
-
 // Use this like this!
 // int n = s.size();
 // for(int i=0;i<n;++i) str[i] = s[i];
 // SuffixSort(n);
 // getHeight(n);
-
 int str[N]; //input
 int rank[N], pos[N]; //output
 int cnt[N], next[N]; //internal
 bool bh[N], b2h[N];
-
 bool smaller_first_char(int a, int b){
   return str[a] < str[b];
 }
-
 void SuffixSort(int n){
   for (int i=0; i<n; ++i){
     pos[i] = i;
@@ -44,7 +38,6 @@ void SuffixSort(int n){
     bh[i] = i == 0 || str[pos[i]] != str[pos[i-1]];
     b2h[i] = false;
   }
-
   for (int h = 1; h < n; h <<= 1){
     int buckets = 0;
     for (int i=0, j; i < n; i = j){
@@ -60,7 +53,6 @@ void SuffixSort(int n){
         rank[pos[j]] = i;
       }
     }
-
     cnt[rank[n - h]]++;
     b2h[rank[n - h]] = true;
     for (int i = 0; i < n; i = next[i]){
@@ -90,7 +82,6 @@ void SuffixSort(int n){
   }
 }
 // End of suffix array algorithm
-
 int height[N];
 // height[i] =
 //  length of the LCP of suffix pos[i] and pos[i-1]
@@ -107,11 +98,8 @@ void getHeight(int n){
     }
   }
 }
-
 // lcp(x,y) = min(lcp(x,x+1), lcp(x+1, x+2), ... , lcp(y-1, y))
-
 string s;
-
 // You need a string W that represents the pattern
 // Not really tested. Pseudo-tested
 int match_prefix(int n){
@@ -134,7 +122,6 @@ int match_prefix(int n){
   printf("Matched at %d\n", r);
   return pos[r];
 }
-
 void get_the_biggest_repeated_substring(){
   // Get the biggest repeated substring and how many times it appears
   // First, get the biggest repeated string (biggest height[i])
@@ -144,7 +131,6 @@ void get_the_biggest_repeated_substring(){
     if(longest < height[i]){longest = height[i]; position = i - 1;}
   }
 }
-
 void number_of_different_substrings(){
   // If you have the i-th smaller suffix, Si,
   //    it's length will be |Si| = n - pos[i]
@@ -155,7 +141,6 @@ void number_of_different_substrings(){
   //    from these two suffixes => n - pos[i] - height[i]
   for(int i=0;i<n;++i) ans += n-pos[i]-height[i];
 }
-
 void number_of_repeated_substrings(){
   // Number of substrings that appear at least twice in the text.
   // The trick is that all 'spare' substrings that can give us 
@@ -166,23 +151,17 @@ void number_of_repeated_substrings(){
   //     Sum(max[0, Lcp(i, i - 1) - Lcp(i - 2, i - 1)])
   //     for 2 <= i < n
   // File Recover 
-  
   int cnt = height[1];
   for(int i=2;i<n;++i){
     cnt += max(0, height[i] - height[i-1]);
   }
-
 }
-
-
 void repeated_m_times(int m){
   // Given a string s and an int m, find the size
   // of the biggest substring repeated m times (find the rightmost pos)
   // if a string is repeated m+1 times, then it's repeated m times too
-
   // The answer is the maximum, over i, of the longest common prefix
   // between suffix i+m-1 in the sorted array.
-  
   int length = 0, position = -1, t;
   for(int i=0;i<=n-m;++i){
     if((t=lcp(i,i+m-1,n)) > length){
@@ -190,7 +169,6 @@ void repeated_m_times(int m){
       position = pos[i];
     }else if(t == length) { position = max(position, pos[i]); }
   }
-
   // Here you'll get the rightmost position
   // (that means, the last time the substring appears)
   for(int i = 0; i < n; ){
@@ -208,9 +186,6 @@ void repeated_m_times(int m){
   else
     puts("none");
 }
-
-
-
 void smallest_rotation(){
   // Reads a string of lenght k. Then just double it (s = s+s) 
   // and find the suffix arrays.
